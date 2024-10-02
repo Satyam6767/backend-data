@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 const express = require('express');
 const app = express();
 
@@ -15,10 +15,7 @@ app.get('/', function (req, res) {
     res.send("new hello world")
 })
 
-app.listen(PORT, () => {
-    console.log('server  run at 9000')
 
-})
 
 app.post('/person', async (req, res) => {
 
@@ -112,7 +109,10 @@ app.delete('/:id',async (req, res)=>{
     }
 } )
 
+app.listen(PORT, () => {
+    console.log('server  run at 9000')
 
+})
 
 
 
