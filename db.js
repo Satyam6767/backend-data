@@ -1,8 +1,11 @@
 const mongoose = require('mongoose')
 
-const mongoDB_Url = process.env.mongo_Url;
 
-mongoose.connect(mongoDB_Url, {
+// const mongoUrl = 'mongodb://localhost:27017/newhotel';
+
+const mongoUrl = process.env.MongoDB_URL;
+
+mongoose.connect(mongoUrl, {
     useNewUrlParser: true, 
     useUnifiedTopology: true
 })
